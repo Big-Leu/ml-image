@@ -1,0 +1,50 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+        "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I assist you today?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": ["Thank you for using our service. Have a safe journey!", "Have a great day!", "Goodbye! Come back if you have more questions."]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful"],
+        "responses": ["You're welcome! If you need any more information, feel free to ask.", "I'm here to help!", "My pleasure"]
+      },
+      {
+        "tag": "hours",
+        "patterns": ["What are your operating hours?", "What are your service hours?", "When do you provide assistance?"],
+        "responses": ["Our customer service is available 24/7 to assist you."]
+      },
+      {
+        "tag": "uber_query",
+        "patterns": ["Where is the nearest Uber pickup location?", "Uber pickup point", "Find the closest Uber"],
+        "responses": ["The nearest Uber pickup location to your current location is "]
+      },
+      {
+        "tag": "local_navigation_uber",
+        "patterns": ["How can I get an Uber?", "Directions for Uber pickup", "Navigate to the closest Uber pickup point"],
+        "responses": ["To get an Uber, you can use the app to request a ride to your desired location."]
+      },
+      {
+        "tag": "uber_services",
+        "patterns": ["What services does Uber provide?", "Tell me about Uber services", "Service information for Uber"],
+        "responses": ["Uber provides various services including UberX, UberXL, and more. How can I assist you further with Uber services?"]
+      },
+      {
+        "tag": "ride_booking",
+        "patterns": ["How can I book an Uber ride?", "Uber booking process", "Book an Uber"],
+        "responses": ["You can book an Uber ride through the Uber app on your mobile device. I can guide you through the process if you'd like."]
+      },
+      {
+        "tag": "ride_estimate",
+        "patterns": ["Tell me about the Uber ride estimate", "Uber fare information", "Estimate for Uber ride"],
+        "responses": ["You can check the Uber ride estimate in the app before confirming your booking. Please provide your pickup and drop-off locations for a more accurate estimate."]
+      }
+    ]
+  }
+  
