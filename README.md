@@ -38,7 +38,8 @@ To set up the project locally, follow these steps:
 1. **how to start frontend/backen:**
    ```bash
    cd frontend
-   npm i 
+   npm i
+   npm run build 
    node app.js
 
 1. **how to start frontend/backen using the docker:**
@@ -48,4 +49,5 @@ To set up the project locally, follow these steps:
 
 1. **how to start backend of the chatbot:**
    ```bash
+   pip install -r requirements.txt
    python app.y

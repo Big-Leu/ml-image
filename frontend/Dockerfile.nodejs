@@ -11,6 +11,8 @@ COPY . .
 # Install dependencies (if applicable)
 RUN npm install
 
+RUN npm run build
+
 # Expose the port your application will run on
 EXPOSE 8080
 
