@@ -1,0 +1,7 @@
+jinja2 template
+gui
+alambic sqlalchemy
+
+alembic revision --autogenerate -m "Description of migration"
+
+alembic upgrade head

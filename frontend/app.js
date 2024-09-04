@@ -26,7 +26,7 @@ app.get("/*", function(req, res) {
 
 app.post('/signup', async (req, res) => {
     try {
-        const apiUrl = 'https://rgr0kluarc.execute-api.ap-south-1.amazonaws.com/prod1/signup';
+        const apiUrl = 'http://127.0.0.1:5000/api/v1/form/signUP';
         const email = req.body.email;
         const name=req.body.name
         const password = req.body.password;
@@ -41,9 +41,7 @@ app.post('/signup', async (req, res) => {
                 'Content-Type': 'application/json'
             }
         });
-       console.log(response)
         if (response.data.message==='Data inserted successfully!') {
-            console.log(response.data.message);
             return res.json({ message: 'Success' });
         } else {
             console.log('Error Inserting the data');
@@ -56,7 +54,7 @@ app.post('/signup', async (req, res) => {
 });
 app.post('/home', async (req, res) => {
     try {
-        const apiUrl = 'https://3se47no259.execute-api.ap-south-1.amazonaws.com/prod3/comment';
+        const apiUrl = 'http://127.0.0.1:5000/api/v1/form/comment';
         const author = req.body.author;
         const comment = req.body.comment;
         const postData = {
@@ -68,9 +66,7 @@ app.post('/home', async (req, res) => {
                 'Content-Type': 'application/json'
             }
         });
-       console.log(response)
-        if (response.data.message==='Comment inserted successfully') {
-            console.log(response.data.message);
+        if (response.data==='Comment inserted successfully') {
             return res.json({ message: 'Success' });
         } else {
             console.log('Error Inserting the data');
@@ -84,10 +80,9 @@ app.post('/home', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     try {
-        const apiUrl = 'https://iw1y5esrkb.execute-api.ap-south-1.amazonaws.com/prod/login';
+        const apiUrl = 'http://127.0.0.1:5000/api/v1/form/login';
         const email = req.body.email;
         const password = req.body.password;
-
         const postData = {
             email,
             password
@@ -97,8 +92,7 @@ app.post('/login', async (req, res) => {
                 'Content-Type': 'application/json'
             }
         });
-       console.log(response)
-        if (response.data.message==='Login successful') {
+        if (response.data ==='Login successful') {
             console.log('Login success');
             return res.json({ message: 'Success' });
         } else {
