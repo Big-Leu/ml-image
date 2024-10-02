@@ -50,4 +50,5 @@ To set up the project locally, follow these steps:
 1. **how to start backend of the chatbot:**
    ```bash
    pip install -r requirements.txt
-   python app.y
+   cd backend
+   python app.py
