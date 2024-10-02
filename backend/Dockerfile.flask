@@ -1,0 +1,23 @@
+# Use the official Python 3.12 image
+FROM python:3.12-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the requirements.txt file to the working directory
+COPY requirements.txt .
+
+# Install the dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install "Flask[async]"
+# Copy the rest of the application code to the container
+COPY . .
+
+EXPOSE 5000
+
+# Explicitly install Flask with the async extra
+
+# Specify the command to run the application (if applicable)
+CMD ["python", "app.py"]
+

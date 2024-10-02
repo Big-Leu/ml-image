@@ -6,10 +6,10 @@ from util.chatbot.nltk_utils import tokenize, bag_of_words
 from util.chatbot.model import NeuralNet
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-with open("E:/Git-Hub/Personal/ml-image/backend/util/chatbot/intents.json", "r") as json_data:
+with open("util/chatbot/intents.json", "r") as json_data:
     intents = json.load(json_data)
 
-FILE = "E:/Git-Hub/Personal/ml-image/backend/util/chatbot/data.pth"
+FILE = "util/chatbot/data.pth"
 data = torch.load(FILE, weights_only=True)
 
 input_size = data["input_size"]

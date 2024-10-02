@@ -14,7 +14,7 @@ RUN npm install
 RUN npm run build
 
 # Expose the port your application will run on
-EXPOSE 8080
+EXPOSE 8081
 
 # Define the command to start your application
 CMD ["npm", "start"]
