@@ -1,3 +1,4 @@
+from flask import json
 from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from generated_model import (
@@ -15,8 +16,9 @@ class formService:
     async def signUp(self, data):
         try:
 
-            existing_user = self.session.query(
-                UserSignUP).filter_by(email=data['email']).first()
+            existing_user = (
+                self.session.query(UserSignUP).filter_by(email=data["email"]).first()
+            )
             if existing_user:
                 return "Error: Email already exists."
 
@@ -35,8 +37,9 @@ class formService:
         try:
             existing_user = self.session.execute(
                 select(UserSignUP).where(
-                    UserSignUP.email == data['email'],
-                    UserSignUP.password == data['password'])
+                    UserSignUP.email == data["email"],
+                    UserSignUP.password == data["password"],
+                )
             )
             user = existing_user.scalar_one_or_none()
 
@@ -45,7 +48,7 @@ class formService:
             else:
                 return "Error"
         except IntegrityError as e:
-            self.session.rollback() 
+            self.session.rollback()
             return f"Error: {str(e)}"
 
 

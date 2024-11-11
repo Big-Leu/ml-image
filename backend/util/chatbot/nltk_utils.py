@@ -1,6 +1,7 @@
 import nltk
 import numpy as np
 from nltk.stem.porter import PorterStemmer
+
 # nltk.data.path.append('C:\\Python312\\nltk_data')
 # nltk.download('punkt_tab')
 

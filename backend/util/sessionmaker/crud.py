@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from util.models.comment import Base
 
 
-def get_session(db_url='sqlite:///new.db'):
+def get_session(db_url="sqlite:///new.db"):
 
     try:
         engine = create_engine(db_url)
@@ -15,7 +15,7 @@ def get_session(db_url='sqlite:///new.db'):
         return None
 
 
-def get_session2(db_url='sqlite:///comment.db'):
+def get_session2(db_url="sqlite:///comment.db"):
 
     try:
         engine = create_engine(db_url)

@@ -12,7 +12,7 @@ class Base(DeclarativeBase):
 
 
 class Comment(Base):
-    __tablename__ = 'comment'
+    __tablename__ = "comment"
     id = Column(Integer, primary_key=True, autoincrement=True)
     comment = Column(String)
     author = Column(String)

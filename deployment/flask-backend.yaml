@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-backend-deployment
-        image: bigleu007/backend:v3
+        image: bigeu007/backend:v5
         resources:
           limits:
             memory: "4096Mi"

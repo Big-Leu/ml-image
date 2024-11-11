@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from util.form.crud import commentService, formService
 from util.chatbot.chat import get_response
+
 app = Flask(__name__)
 CORS(app)
 

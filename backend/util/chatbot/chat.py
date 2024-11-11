@@ -4,6 +4,7 @@ import json
 import torch
 from util.chatbot.nltk_utils import tokenize, bag_of_words
 from util.chatbot.model import NeuralNet
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 with open("util/chatbot/intents.json", "r") as json_data:
